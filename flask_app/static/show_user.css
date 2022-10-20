@@ -1,0 +1,24 @@
+* {
+    border: 0px;
+    outline: 0px;
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* I learned this trick for inserting pipes between links from StackOverflow */
+.btm-links {
+    border-right: 1px solid black;
+    margin-right: 5px;
+    padding-right: 10px;
+}
+
+.btm-links:last-of-type {
+    border-right: none;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='new_user_form.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Edit User Info</h1>
+            <a href="/users" class="home_link">Home</a>
+        </div>
+        <form class="form_container" action="/users/update" method="POST">
+            <input type="hidden" name="id" value="{{ id }}">
+            <label for="first_name">First Name:</label>
+            <input class="text_input" type="text" name="first_name" value="{{ user['first_name'] }}">
+            <label for="last_name">Last Name:</label>
+            <input class="text_input" type="text" name="last_name" value="{{ user['last_name'] }}">
+            <label for="email">Email:</label>
+            <input class="text_input" type="text" name="email" value="{{ user['email'] }}">
+            <input class="submit_btn" type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
